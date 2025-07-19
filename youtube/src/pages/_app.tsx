@@ -8,13 +8,15 @@ import { UserProvider } from "../lib/AuthContext";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
-      <div className="min-h-screen bg-white text-black">
+      <div className="min-h-screen bg-white text-black ">
         <title>YouTube Clone</title>
         <Header />
         <Toaster />
         <div className="flex">
           <Sidebar />
-          <Component {...pageProps} />
+          <main className="flex-1 overflow-hidden px-4 ">
+            <Component {...pageProps} />
+          </main>
         </div>
       </div>
     </UserProvider>
